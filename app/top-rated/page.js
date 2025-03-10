@@ -5,18 +5,18 @@ import Sidebar from "@/components/Sidebar";
 import { AiFillStar } from "react-icons/ai";
 import Link from "next/link";
 
-export default function Home() {
+export default function TopRated() {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    fetchMovies("popular").then(setMovies);
+    fetchMovies("top_rated").then(setMovies);
   }, []);
 
   return (
     <div className="flex">
       <Sidebar />
       <div className="p-5 w-full">
-        <h1 className="text-2xl font-bold mb-4 text-center">Trending Movies</h1>
+        <h1 className="text-2xl font-bold mb-4 text-center">Top Rated Movies</h1>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
           {movies.map((movie) => (
             <Link href={`/movie/${movie.id}`} key={movie.id}>
