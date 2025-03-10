@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { AiOutlineMenu, AiFillFire, AiFillStar } from "react-icons/ai";
-
+import { MdUpcoming } from "react-icons/md";
 import { MdOutlineUpcoming } from "react-icons/md";
 
 const Sidebar = () => {
@@ -36,7 +36,7 @@ const Sidebar = () => {
         </li>
           
           <li className="flex items-center space-x-3">
-          <MdOutlineUpcoming className="text-blue-400" size={22} />
+          <MdUpcoming className="text-green-400" size={22} />
           <Link href="/upcoming" onClick={() => setIsOpen(false)}>Upcoming</Link>
         </li>
         </ul>
