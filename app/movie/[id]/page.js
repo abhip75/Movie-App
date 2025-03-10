@@ -55,7 +55,7 @@ export default function MovieDetails() {
         {/* Back Button */}
         <div className="flex justify-end cursor-pointer">
           <button 
-            className="text-white bg-gray-800 px-4 py-2 rounded hover:bg-gray-700 transition" 
+            className="text-white bg-gray-800 px-4 py-2 rounded hover:bg-gray-700 transition cursor-pointer" 
             onClick={() => router.back()} 
           >
             Back
