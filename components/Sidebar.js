@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { AiOutlineMenu, AiFillFire, AiFillStar } from "react-icons/ai";
 import { MdUpcoming } from "react-icons/md";
-import { MdOutlineUpcoming } from "react-icons/md";
+
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
