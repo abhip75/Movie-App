@@ -1,11 +1,13 @@
+"use client"; 
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation"; 
 import { AiOutlineMenu, AiFillFire, AiFillStar } from "react-icons/ai";
 import { MdUpcoming } from "react-icons/md";
 
-
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname(); 
 
   return (
     <div>
@@ -25,20 +27,20 @@ const Sidebar = () => {
       >
         <h2 className="text-xl font-bold mb-5 mt-4">MovieApp</h2>
         <ul className="space-y-4">
-          <li className="flex items-center space-x-3">
+          <li className={`flex items-center space-x-3 p-2 rounded-lg ${pathname === "/" ? "bg-gray-700" : ""}`}>
             <AiFillFire className="text-red-500" size={22} />
-            <Link href="/" onClick={() => setIsOpen(false)}>Popular</Link>
+            <Link href="/">Popular</Link>
           </li>
 
-          <li className="flex items-center space-x-3">
-          <AiFillStar className="text-yellow-400" size={22} />
-          <Link href="/top-rated" onClick={() => setIsOpen(false)}>Top Rated</Link>
-        </li>
-          
-          <li className="flex items-center space-x-3">
-          <MdUpcoming className="text-green-400" size={22} />
-          <Link href="/upcoming" onClick={() => setIsOpen(false)}>Upcoming</Link>
-        </li>
+          <li className={`flex items-center space-x-3 p-2 rounded-lg ${pathname === "/top-rated" ? "bg-gray-700" : ""}`}>
+            <AiFillStar className="text-yellow-400" size={22} />
+            <Link href="/top-rated">Top Rated</Link>
+          </li>
+
+          <li className={`flex items-center space-x-3 p-2 rounded-lg ${pathname === "/upcoming" ? "bg-gray-700" : ""}`}>
+            <MdUpcoming className="text-green-400" size={22} />
+            <Link href="/upcoming">Upcoming</Link>
+          </li>
         </ul>
       </div>
     </div>

@@ -30,7 +30,7 @@ export default function MovieDetails() {
         <img
           src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
           alt={movie.title}
-          className="w-full md:w-1/3 rounded shadow-lg"
+          className="w-full md:w-1/3 rounded-lg shadow-lg border-2 border-white cursor-pointer"
         />
 
         <div className="text-white flex-1 mb-9 self-start mt-10">
