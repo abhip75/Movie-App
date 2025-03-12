@@ -24,7 +24,6 @@ export default function MovieDetails() {
   return (
     <div className="flex min-h-screen bg-gray-900">
       <Sidebar /> 
-      
       <div className="flex-1 p-5 max-w-6xl mx-auto flex flex-col md:flex-row gap-8 items-center">
         {/* Movie Poster */}
         <img
@@ -32,6 +31,7 @@ export default function MovieDetails() {
           alt={movie.title}
           className="w-full md:w-1/3 rounded-lg shadow-lg border-2 border-white cursor-pointer"
         />
+         
 
         <div className="text-white flex-1 mb-9 self-start mt-10">
           <h1 className="text-3xl font-bold">{movie.title}</h1>
